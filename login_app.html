@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOH SIM - 로그인</title>
+    <title>OOH SIMULATOR - 로그인</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -48,7 +49,7 @@
 <body>
     <div id="root"></div>
 
-    <script>
+    <script type="text/babel">
         const { useState, useEffect } = React;
         const { createClient } = supabase;
 
@@ -115,7 +116,7 @@
             return (
                 <div className="auth-panel">
                     <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-                        <div className="logo" style={{ marginBottom: '10px' }}>OOH SIM</div>
+                        <div className="logo" style={{ marginBottom: '10px' }}>OOH SIMULATOR</div>
                         <p style={{ color: '#666', fontSize: '14px' }}>로그인하여 시작하세요</p>
                     </div>
 
@@ -215,7 +216,7 @@
             return (
                 <div className="dashboard">
                     <div className="header">
-                        <div className="logo">OOH SIM</div>
+                        <div className="logo">OOH SIMULATOR</div>
                         <div className="nav">
                             <span style={{ fontSize: '14px', color: '#666' }}>{user.email}</span>
                             <button className="logout-btn" onClick={onLogout}>로그아웃</button>
